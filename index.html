@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TIMER | weniv</title>
+
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <h1><img class="logo" src="./img/logo.png" alt="위니브 로고" /></h1>
+      <section class="timer">
+        <span class="timer-text">TIMER</span>
+
+        <ul class="time-wrap">
+          <li class="hrs"></li>
+
+          <li class="min"></li>
+
+          <li class="sec"></li>
+        </ul>
+
+        <div class="btn-list">
+          <button class="start" type="button">
+            <img src="./img/icon-start.png " />START
+          </button>
+          <button class="reset" type="button">
+            <img src="./img/icon-reset.png " />START
+          </button>
+        </div>
+      </section>
+      <footer>
+        <img class="rights" src="./img/rights.png" alt="저작권" />
+      </footer>
+    </div>
+    <script>
+      // 손도 못댔습니다...ㅠ...
+      // 챗GPT...
+      function countdown(timeInSeconds) {
+        let remainingTime = timeInSeconds;
+
+        const timer = setInterval(() => {
+          if (remainingTime <= 0) {
+            clearInterval(timer);
+            console.log("Countdown finished!");
+          } else {
+            remainingTime--;
+            console.log("Remaining time: " + remainingTime + " second(s)");
+          }
+        }, 1000);
+      }
+    </script>
+  </body>
+</html>
